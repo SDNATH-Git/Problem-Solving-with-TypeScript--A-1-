@@ -52,4 +52,13 @@ const key: PersonKeys = "name"; // valid
 // const invalidKey: PersonKeys = "salary"; // Error, কারণ salary Person-এর property নয়
 ```
 ---
+ব্যাখ্যা:
+
+keyof Person type তৈরি করে "name" | "age"।
+
+এর মানে হলো, শুধু Person-এর declared properties assign করা যাবে।
+
+এটি type-safe কোড লিখতে সাহায্য করে, যেমন dynamic key access বা generic function-এ।
+
+---
 
