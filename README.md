@@ -4,7 +4,7 @@ TypeScript হলো JavaScript-এর উপরে তৈরি একটি st
 
 ---
 
-## ১️⃣ 1. What are some differences between interfaces and types in TypeScript?
+## 1. What are some differences between interfaces and types in TypeScript?
 
 TypeScript-এ **interface** এবং **type alias** দুইই object structure define করতে পারে, কিন্তু তাদের মধ্যে কিছু subtle পার্থক্য আছে।  
 
@@ -40,7 +40,7 @@ Type Alias object ছাড়াও primitive, union বা intersection type �
 যদি একাধিক declaration করতে চান বা extend করার জন্য plan থাকে → interface ব্যবহার করা উত্তম।
 
 ---
-## ২️⃣ 2. What is the use of the keyof keyword in TypeScript? Provide an example.
+## 2. What is the use of the keyof keyword in TypeScript? Provide an example.
 
 TypeScript-এ `keyof` keyword ব্যবহার করা হয় একটি object type-এর **all property names** type হিসেবে নেয়ার জন্য।  
 এটি বিশেষভাবে **generic programming** বা object manipulation-এ কাজে লাগে।
