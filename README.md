@@ -31,6 +31,14 @@ type Employee = {
   salary: number;
 };
 ```
+ব্যাখ্যা:
+
+Interface সাধারণত object structure বা class contract define করতে ব্যবহার হয়।
+
+Type Alias object ছাড়াও primitive, union বা intersection type তৈরি করতে ব্যবহার করা যায়।
+
+যদি একাধিক declaration করতে চান বা extend করার জন্য plan থাকে → interface ব্যবহার করা উত্তম।
+
 ---
 ## ২️⃣ 2. What is the use of the keyof keyword in TypeScript? Provide an example.
 
@@ -51,7 +59,6 @@ type PersonKeys = keyof Person; // "name" | "age"
 const key: PersonKeys = "name"; // valid
 // const invalidKey: PersonKeys = "salary"; // Error, কারণ salary Person-এর property নয়
 ```
----
 ব্যাখ্যা:
 
 keyof Person type তৈরি করে "name" | "age"।
