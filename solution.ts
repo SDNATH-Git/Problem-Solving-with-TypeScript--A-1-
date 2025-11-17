@@ -119,5 +119,73 @@ function filterActiveUsers(
 
 //--- Problem 6 ----//
 
+interface Book {
+  title: string;
+  author: string;
+  publishedYear: number;
+  isAvailable: boolean;
+}
+
+function printBookDetails(book: Book): void {
+  const availability = book.isAvailable ? "Yes" : "No";
+  console.log(
+    `Title: ${book.title}, Author: ${book.author}, Published: ${book.publishedYear}, Available: ${availability}`
+  );
+}
+
+// Test case
+// const myBook: Book = {
+//   title: 'The Great Gatsby',
+//   author: 'F. Scott Fitzgerald',
+//   publishedYear: 1925,
+//   isAvailable: true,
+// };
+
+// printBookDetails(myBook);
+
+//--- Problem 7 ----//
+
+function getUniqueValues(arr1: (number | string)[], arr2: (number | string)[]): string {
+  const combined: (number | string)[] = [];
+  
+  for (let i = 0; i < arr1.length; i++) {
+    let isDuplicate = false;
+    for (let j = 0; j < combined.length; j++) {
+      if (arr1[i] === combined[j]) {
+        isDuplicate = true;
+        break;
+      }
+    }
+    if (!isDuplicate) {
+      combined[combined.length] = arr1[i];
+    }
+  }
+
+  for (let i = 0; i < arr2.length; i++) {
+    let isDuplicate = false;
+    for (let j = 0; j < combined.length; j++) {
+      if (arr2[i] === combined[j]) {
+        isDuplicate = true;
+        break;
+      }
+    }
+    if (!isDuplicate) {
+      combined[combined.length] = arr2[i];
+    }
+  }
+
+
+  const formatted = `[${combined.join(', ')}];`;
+  return formatted;
+}
+
+
+// Test data
+// const array1 = [1, 2, 3, 4, 5];
+// const array2 = [3, 4, 5, 6, 7];
+
+// console.log(getUniqueValues(array1, array2));
+
+//---- problem 8 ----//
 
 
