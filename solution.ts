@@ -1,4 +1,4 @@
-//--- Problem 1 ----- //
+
 
 function formatValue (value: string | number | boolean): string | number | boolean {
     if (typeof value === 'string'){
@@ -15,12 +15,9 @@ function formatValue (value: string | number | boolean): string | number | boole
     }
 }
 
-// console.log(formatValue('hello'));
-// console.log(formatValue(5));
-// console.log(formatValue(true));
-// console.log(formatValue(false));
 
-//--- Problem 2 ----- //
+
+
 
 function getLength (value : string | any[]): number{
     if(typeof value === 'string'){
@@ -34,13 +31,10 @@ function getLength (value : string | any[]): number{
  }
 }
 
-// console.log(getLength('typescript'));
-// console.log(getLength([10, 20, 30, 40]));
-// console.log(getLength([]));
-// console.log(getLength(''));
 
 
-//---- problem 3 -----//
+
+
 
 class Person {
     name: string;
@@ -58,18 +52,11 @@ class Person {
 
 }
 
-// const person1 = new Person('John Doe', 30);
-// console.log(person1.getDetails());
-
-// const person2 = new Person('Alice', 25);
-// console.log(person2.getDetails());
-
-// 'Name: John Doe, Age: 30';
-// 'Name: Alice, Age: 25';
 
 
 
-//--- Problem 4 ----//
+
+
 
 function filterByRating( items: { title: string; rating: number }[])
 : 
@@ -82,16 +69,12 @@ string { const filtered = items.filter(item => item.rating >= 4);
   return formatted;
 }
 
-// Test data
-// const books = [
-//   { title: 'Book A', rating: 4.5 },
-//   { title: 'Book B', rating: 3.2 },
-//   { title: 'Book C', rating: 5.0 },
-// ];
 
-// console.log(filterByRating(books));
 
-//--- Problem 5 ----//
+
+
+
+
 
 function filterActiveUsers(
   users: { id: number; name: string; email: string; isActive: boolean }[]
@@ -108,16 +91,11 @@ function filterActiveUsers(
   return formatted;
 }
 
-// Test data
-// const users = [
-//   { id: 1, name: 'Rakib', email: 'rakib@example.com', isActive: true },
-//   { id: 2, name: 'Asha', email: 'asha@example.com', isActive: false },
-//   { id: 3, name: 'Rumi', email: 'rumi@example.com', isActive: true },
-// ];
 
-// console.log(filterActiveUsers(users));
 
-//--- Problem 6 ----//
+
+
+
 
 interface Book {
   title: string;
@@ -133,17 +111,12 @@ function printBookDetails(book: Book): void {
   );
 }
 
-// Test case
-// const myBook: Book = {
-//   title: 'The Great Gatsby',
-//   author: 'F. Scott Fitzgerald',
-//   publishedYear: 1925,
-//   isAvailable: true,
-// };
 
-// printBookDetails(myBook);
 
-//--- Problem 7 ----//
+
+
+
+
 
 function getUniqueValues(arr1: (number | string)[], arr2: (number | string)[]): string {
   const combined: (number | string)[] = [];
@@ -180,13 +153,10 @@ function getUniqueValues(arr1: (number | string)[], arr2: (number | string)[]): 
 }
 
 
-// Test data
-// const array1 = [1, 2, 3, 4, 5];
-// const array2 = [3, 4, 5, 6, 7];
 
-// console.log(getUniqueValues(array1, array2));
 
-//---- problem 8 ----//
+
+
 
 function calculateTotalPrice(
   products: { name: string; price: number; quantity: number; discount?: number }[]
@@ -203,12 +173,7 @@ function calculateTotalPrice(
   return `${total};`;
 }
 
-// Test data
-const products = [
-  { name: 'Pen', price: 10, quantity: 2 },
-  { name: 'Notebook', price: 25, quantity: 3, discount: 10 },
-  { name: 'Bag', price: 50, quantity: 1, discount: 20 },
-];
 
-console.log(calculateTotalPrice(products));
+
+
 
