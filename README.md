@@ -30,7 +30,7 @@ type Employee = {
   name: string;
   salary: number;
 };
-
+```
 ---
 ## ২️⃣ 2. What is the use of the keyof keyword in TypeScript? Provide an example.
 
@@ -50,5 +50,6 @@ type PersonKeys = keyof Person; // "name" | "age"
 // ব্যবহার:
 const key: PersonKeys = "name"; // valid
 // const invalidKey: PersonKeys = "salary"; // Error, কারণ salary Person-এর property নয়
-
+```
 ---
+
