@@ -188,4 +188,27 @@ function getUniqueValues(arr1: (number | string)[], arr2: (number | string)[]): 
 
 //---- problem 8 ----//
 
+function calculateTotalPrice(
+  products: { name: string; price: number; quantity: number; discount?: number }[]
+): string {
+  if (products.length === 0) return '0;';
+
+  const total = products
+    .map(product => {
+      const discountFactor = product.discount ? (100 - product.discount) / 100 : 1;
+      return product.price * product.quantity * discountFactor;
+    })
+    .reduce((sum, curr) => sum + curr, 0);
+
+  return `${total};`;
+}
+
+// Test data
+const products = [
+  { name: 'Pen', price: 10, quantity: 2 },
+  { name: 'Notebook', price: 25, quantity: 3, discount: 10 },
+  { name: 'Bag', price: 50, quantity: 1, discount: 20 },
+];
+
+console.log(calculateTotalPrice(products));
 
