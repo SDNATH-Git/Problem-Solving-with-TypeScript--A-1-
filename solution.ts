@@ -93,3 +93,31 @@ string { const filtered = items.filter(item => item.rating >= 4);
 
 //--- Problem 5 ----//
 
+function filterActiveUsers(
+  users: { id: number; name: string; email: string; isActive: boolean }[]
+): string {
+  const activeUsers = users.filter(user => user.isActive === true);
+
+  const formatted = `[\n  ${activeUsers
+    .map(
+      u =>
+        `{ id: ${u.id}, name: '${u.name}', email: '${u.email}', isActive: ${u.isActive} }`
+    )
+    .join(',\n  ')},\n];`;
+
+  return formatted;
+}
+
+// Test data
+// const users = [
+//   { id: 1, name: 'Rakib', email: 'rakib@example.com', isActive: true },
+//   { id: 2, name: 'Asha', email: 'asha@example.com', isActive: false },
+//   { id: 3, name: 'Rumi', email: 'rumi@example.com', isActive: true },
+// ];
+
+// console.log(filterActiveUsers(users));
+
+//--- Problem 6 ----//
+
+
+
